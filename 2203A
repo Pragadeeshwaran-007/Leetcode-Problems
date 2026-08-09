@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        long long n, m, d;
+        scanf("%lld %lld %lld", &n, &m, &d);
+        long long maxPerTower = d / m + 1; // max boxes in one tower
+        long long towers = (n + maxPerTower - 1) / maxPerTower; // ceil division
+        printf("%lld\n", towers);
+    }
+    return 0;
+}
